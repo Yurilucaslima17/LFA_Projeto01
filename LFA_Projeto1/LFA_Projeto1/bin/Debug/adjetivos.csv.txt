@@ -1,0 +1,1 @@
+nice,blue,fast,slow,sweet,sour,funny

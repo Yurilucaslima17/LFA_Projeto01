@@ -8,12 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace LFA_Projeto1
 {
     public partial class Form1 : Form
     {
         Grafo grafo = new Grafo();
+
         public Form1()
         {
             InitializeComponent();
@@ -24,9 +26,30 @@ namespace LFA_Projeto1
             string resultado = null;
 
             //Logica
+            //Le o arquivo em csv e transforma em uma lista de strings
+            var listaSubstantivosPessoais = lerCSV(@"substantivos-pessoais.csv");
+            var listaSubstantivosSimples = lerCSV(@"substantivos-simples.csv");
+            var listaVerbos = lerCSV(@"verbos.csv");
+            var listaAdjetivos = lerCSV(@"adjetivos.csv");
+
+            //Pegar uma palavra aleatório da lista
+            var substantivoPessoal = pegarPalavra(listaSubstantivosPessoais);
+            var verbo = pegarPalavra(listaVerbos);
+            var adjetivo = pegarPalavra(listaAdjetivos);
+
+            Random aleatorio = new Random();
+            var estrutura  = aleatorio.Next(1, 3);
 
             //Fim Logica
-
+            if(estrutura == 1)
+            {
+                resultado = substantivoPessoal + " " + verbo + " " + adjetivo + " ";
+            }
+            else if (estrutura == 2)
+            {
+                var substantivoSimples = pegarPalavra(listaSubstantivosSimples);
+                resultado = substantivoPessoal + " " + verbo + " " + adjetivo + " the " + substantivoSimples;
+            }
             lblFrase.Text = resultado;
         }
 
@@ -34,6 +57,18 @@ namespace LFA_Projeto1
         {
             FormGrafo fg = new FormGrafo(grafo);
             fg.ShowDialog();
+        }
+
+        private List<string> lerCSV(string nome)
+        {
+            var lista = File.ReadAllText(nome).Split(',').ToList();
+            return lista;
+        }
+
+        private string pegarPalavra(List<string> lista)
+        {
+            Random numeroAleatorio = new Random();
+            return lista[numeroAleatorio.Next(0, lista.Count)];
         }
     }
 }
