@@ -27,13 +27,13 @@ namespace LFA_Projeto1
 
             //Logica
             //Le o arquivo em csv e transforma em uma lista de strings
-            var listaSubstantivosPessoais = lerCSV(@"substantivos-pessoais.csv");
-            var listaSubstantivosSimples = lerCSV(@"substantivos-simples.csv");
+            var listaPronomes = lerCSV(@"pronomes.csv");
+            var listaSubstantivos = lerCSV(@"substantivos.csv");
             var listaVerbos = lerCSV(@"verbos.csv");
             var listaAdjetivos = lerCSV(@"adjetivos.csv");
 
             //Pegar uma palavra aleatório da lista
-            var substantivoPessoal = pegarPalavra(listaSubstantivosPessoais);
+            var pronome = pegarPalavra(listaPronomes);
             var verbo = pegarPalavra(listaVerbos);
             var adjetivo = pegarPalavra(listaAdjetivos);
 
@@ -43,12 +43,12 @@ namespace LFA_Projeto1
             //Fim Logica
             if(estrutura == 1)
             {
-                resultado = substantivoPessoal + " " + verbo + " " + adjetivo + " ";
+                resultado = pronome + " " + verbo + " " + adjetivo + " ";
             }
             else if (estrutura == 2)
             {
-                var substantivoSimples = pegarPalavra(listaSubstantivosSimples);
-                resultado = substantivoPessoal + " " + verbo + " " + adjetivo + " the " + substantivoSimples;
+                var substantivoSimples = pegarPalavra(listaSubstantivos);
+                resultado = pronome + " " + verbo + " the " + substantivoSimples;
             }
             lblFrase.Text = resultado;
         }
