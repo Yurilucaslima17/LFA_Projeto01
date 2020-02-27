@@ -16,10 +16,23 @@ namespace LFA_Projeto1.Classes
         public No(int i, string path)
         {
             Id = i;
-            string[] lines = File.ReadAllLines(path);
+            if (path.Contains(".csv"))
+            {
+                Value = lerCSV(path);
+            }
+            else
+            {
+                string[] lines = File.ReadAllLines(path);
 
-            foreach (string line in lines)
-                Value.Add(line);
+                foreach (string line in lines)
+                    Value.Add(line);
+            }
+        }
+        public No(int i, List<string> a)
+        {
+            Id = i;
+
+            Value = a;
         }
         public int Id { get; set; }
         public List<string> Value { get; set; }
@@ -31,6 +44,10 @@ namespace LFA_Projeto1.Classes
 
             return ret;
         }
-
+        private List<string> lerCSV(string nome)
+        {
+            var lista = File.ReadAllText(nome).Split(',').ToList();
+            return lista;
+        }
     }
 }
