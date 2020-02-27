@@ -20,14 +20,20 @@ namespace LFA_Projeto1
             Grafo = grafo;
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            System.Object[] ItemObject = new System.Object[grafo.Grafos.Count];
-            for (int i = 0; i <= grafo.Grafos.Count; i++)
+            No[] ItemObject = new No[grafo.Nos.Count];
+            for (int i = 0; i < grafo.Nos.Count; i++)
             {
-                ItemObject[i] = grafo.Grafos[i];
+                ItemObject[i] = grafo.Nos[i];
+            }
+            Aresta[] ItemObject1 = new Aresta[grafo.Arestas.Count];
+            for (int i = 0; i < grafo.Arestas.Count; i++)
+            {
+                ItemObject1[i] = grafo.Arestas[i];
             }
             comboBox1.Items.AddRange(ItemObject);
             comboBox2.Items.AddRange(ItemObject);
-            dataGridView1.DataSource = Grafo.Grafos;
+            dataGridView1.DataSource = Grafo.Nos;
+            dataGridView2.DataSource = Grafo.Arestas;
         }
 
         private void btnNovaAresta_Click(object sender, EventArgs e)

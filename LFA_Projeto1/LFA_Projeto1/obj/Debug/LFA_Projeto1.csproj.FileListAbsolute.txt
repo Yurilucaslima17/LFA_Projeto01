@@ -1,0 +1,10 @@
+D:\Downloads\LFA_Projeto01-master\LFA_Projeto01-master\LFA_Projeto1\LFA_Projeto1\bin\Debug\LFA_Projeto1.exe.config
+D:\Downloads\LFA_Projeto01-master\LFA_Projeto01-master\LFA_Projeto1\LFA_Projeto1\bin\Debug\LFA_Projeto1.exe
+D:\Downloads\LFA_Projeto01-master\LFA_Projeto01-master\LFA_Projeto1\LFA_Projeto1\bin\Debug\LFA_Projeto1.pdb
+D:\Downloads\LFA_Projeto01-master\LFA_Projeto01-master\LFA_Projeto1\LFA_Projeto1\obj\Debug\LFA_Projeto1.csprojAssemblyReference.cache
+D:\Downloads\LFA_Projeto01-master\LFA_Projeto01-master\LFA_Projeto1\LFA_Projeto1\obj\Debug\LFA_Projeto1.Form1.resources
+D:\Downloads\LFA_Projeto01-master\LFA_Projeto01-master\LFA_Projeto1\LFA_Projeto1\obj\Debug\LFA_Projeto1.FormGrafo.resources
+D:\Downloads\LFA_Projeto01-master\LFA_Projeto01-master\LFA_Projeto1\LFA_Projeto1\obj\Debug\LFA_Projeto1.Properties.Resources.resources
+D:\Downloads\LFA_Projeto01-master\LFA_Projeto01-master\LFA_Projeto1\LFA_Projeto1\obj\Debug\LFA_Projeto1.csproj.GenerateResource.cache
+D:\Downloads\LFA_Projeto01-master\LFA_Projeto01-master\LFA_Projeto1\LFA_Projeto1\obj\Debug\LFA_Projeto1.exe
+D:\Downloads\LFA_Projeto01-master\LFA_Projeto01-master\LFA_Projeto1\LFA_Projeto1\obj\Debug\LFA_Projeto1.pdb
